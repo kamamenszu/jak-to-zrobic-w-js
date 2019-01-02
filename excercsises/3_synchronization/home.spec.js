@@ -16,8 +16,14 @@ describe('Protractor Workshop app', function() {
 		var nextButton = element(by.css('a.right'));
 		nextButton.click();
 		//Replace this agly code 
-		browse.sleep(1000);
-		expect(activeCarouselHeader.getText).toEqual(expectedHeader)
+		browse.sleep(5000);
+		expect(activeCarouselHeader.getText).toEqual(expectedHeader);
+
+		var EC = protractor.ExpectedConditions;
+		var button = $('#xyz');
+		var isPresent = EC.presenceOf(button);
+		browser.wait(isPresent, 5000);
+		//browser.wait(EC.presenceOf(button), 5000);
 	});
 	
 	xit('should display drop down after clicking on About menu item', function(){

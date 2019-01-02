@@ -1,9 +1,9 @@
 var Contact = function() {
 
   this.menuItems = element.all(by.css('ul.nav > li > a')); 
-  this.leftField1 = element(by.css('#name'));
-  this.leftField2 = element(by.css('#email'))
-  this.leftField3 = element(by.css('#content'));
+  this.name = element(by.css('#name'));
+  this.email = element(by.css('#email'))
+  this.message = element(by.css('#content'));
   this.leftButton = element(by.css('fieldset > button'));
   this.header = element(by.xpath('//span[1]/h3[1]'));
 
@@ -20,16 +20,23 @@ var Contact = function() {
     this.menuItems.get(idx).click();
   };
 
-  this.sendKeysLeftField1 = function() {
-    this.leftField1.sendKeys('Kamila')
+  this.sendKeysName = function() {
+    this.name.sendKeys('Kamila')
   }
 
-  this.sendKeysLeftField2 = function() {
-    this.leftField2.sendKeys('malpa@wp.pl')
+  this.submitMessage = function (name, email, message){
+    this.sendKeysName(name);
+    this.typeEmail(email);
+    this.sendKeysMessage (message);
+    this.leftButton.click();
+  }
+  
+  this.typeEmail = function(email) {
+    this.email.sendKeys(email);
   }
 
-  this.sendKeysLeftField3 = function() {
-    this.leftField3.sendKeys('Dzień dobry')
+  this.sendKeysMessage = function() {
+    this.message.sendKeys('Dzień dobry')
   }
 
   this.clickLeftButton = function() {
