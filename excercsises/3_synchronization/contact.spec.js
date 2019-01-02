@@ -11,10 +11,9 @@ describe('Protractor Workshop app', function() {
 	});
 
 	it('should display text "Your message has been sent." when user sends message  ', function(){
-
 		contactPage.submitMessage("Kamila", "kam@op.pl", "Hello");
-		expect(contactPage.getHeader()).toBe("Your message has been sent");
-
+		contactPage.waitForMessage(5000);
+		expect(contactPage.getHeader()).toBe("Your message has been sent.");
 	});
 
 });
