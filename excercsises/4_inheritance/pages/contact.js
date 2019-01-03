@@ -13,10 +13,6 @@ var Contact = function() {
    this.load('/contact.html');
   };
 
-  this.getTitle = function() {
-    this.getTitle();
-  };
-
   this.clickMenuItemAt = function(idx) {
     this.menuItems.get(idx).click();
   };
