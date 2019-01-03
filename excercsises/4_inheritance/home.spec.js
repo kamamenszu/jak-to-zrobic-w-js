@@ -7,7 +7,7 @@ describe('How to do it in JS homepage', function() {
 		homePage.get();
 	});
 
-	it('should haveAgile & Automation Days | Konferencja i Warsztaty title', function(){
+	xit('should haveAgile & Automation Days | Konferencja i Warsztaty title', function(){
 		expect(homePage.getTitle()).toEqual("Agile & Automation Days | Konferencja i Warsztaty");
 	});
 
