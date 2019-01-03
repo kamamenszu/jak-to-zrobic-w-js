@@ -39,12 +39,16 @@ var Contact = function () {
     this.submitButton.click();
   }
 
-  this.waitForMessage = function (ms) { 
+  /*this.waitForMessage = function (ms) { 
     var EC = protractor.ExpectedConditions;
 		var isPresent = EC.presenceOf(this.header);
 		browser.wait(isPresent, ms);
-  } 
+  } */
+  
   this.getHeader = function () {
+    var EC = protractor.ExpectedConditions;
+		var isPresent = EC.presenceOf(this.header);
+		browser.wait(isPresent, 5000)
     return this.header.getText();
   }
 };
