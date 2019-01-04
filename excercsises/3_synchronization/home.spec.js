@@ -12,7 +12,6 @@ describe('Protractor Workshop app', function() {
 
 	it('should have "Example headline 2" carousel item after clicking on next arrow', function(){
 		homePage.clickArrow();
-		browser.sleep(1000);
 		expect(homePage.getHeadline2()).toBe('Example Headline 2');
 		
 		/*var expectedHeader = 'Example Headline 2'

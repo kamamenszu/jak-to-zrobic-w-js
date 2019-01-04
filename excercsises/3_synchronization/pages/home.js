@@ -24,6 +24,7 @@ var HomePage = function() {
   
   this.clickArrow = function() {
     this.nextArrow.click();
+    browser.sleep(1000);
   }
 
   this.getHeadline2 = function () {
