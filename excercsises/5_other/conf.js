@@ -43,7 +43,7 @@ exports.config = {
       browser.__dataDir = __dirname + '/data/',
       browser.__pagesDir = __dirname + '/pages/',
       browser.__srcDir = __dirname + '/../../src/',
-      browser.__scrDir = __dirname + '/screenshots',
+      browser.__scrDir = __dirname + '/../../screenshots',
 
       browser.driver.manage().window().maximize();
 
