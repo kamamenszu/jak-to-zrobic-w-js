@@ -12,9 +12,9 @@ var HomePage = function() {
    */
   var self = this;
 
-  this.speakers = element.all(by.css('figcaption'));
+  this.features = element.all(by.css('h2'));
 
-  this.footer = require('../modules/footer');
+ /* this.footer = require('../modules/footer');*/
 
   this.get = function() {
     this.load('/');
@@ -29,11 +29,11 @@ var HomePage = function() {
     this.registerButton.click();
   };
 
-  this.getSpeakers = function(){
-    return this.speakers.map(function(elm, index) {
+  this.getFeatures = function(){
+    return this.features.map(function(elm, index) {
       return {
         index: index,
-        name: elm.element(by.css('a')).getText()
+        name: elm.getText()
       };
     });
   };
@@ -43,12 +43,13 @@ var HomePage = function() {
   };
 
   this.scrolltoLocationSection = function() {
-    var sectionPlace = element(by.xpath('//h3[contains(text(),"Miejsce")]'));
+    var sectionPlace = element(by.xpath('//h3[contains(text(),"Place")]'));
     this.scrollToElement(sectionPlace)
   };
 
-  this.scrolltoSperakersSection = function() {
-    var sectionPlace = element(by.xpath('//h3[contains(text(),"Mówcy")]'));
+  this.scrolltoFeaturesSection = function() {
+    //var sectionPlace = element(by.xpath('//h3[contains(text(),"Speakers")]'));
+    let sectionPlace = element(by.xpath('//h2[contains(text(),"Feature A")]'));
     this.scrollToElement(sectionPlace);
   };
 };

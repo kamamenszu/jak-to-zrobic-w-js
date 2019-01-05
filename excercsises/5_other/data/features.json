@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "index": 0,
+            "name": "Feature A"
+        },
+        {
+            "index": 1,
+            "name": "Feature B"
+        },
+        {
+            "index": 2,
+            "name": "Feature C"
+        }
+    ]
+}
